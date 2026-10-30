@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Productivity Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">Study<span>Flow</span></div>
+
+        <nav>
+            <a href="#dashboard">Dashboard</a>
+            <a href="#tasks">Tasks</a>
+            <a href="#notes">Notes</a>
+            <a href="#about">About</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="hero" id="dashboard">
+            <div>
+                <p class="welcome">WELCOME BACK 👋</p>
+                <h1>Study smarter.<br><span>Achieve more.</span></h1>
+                <p class="description">
+                    A simple student productivity dashboard for managing
+                    assignments, notes and study goals.
+                </p>
+
+                <button onclick="scrollToTasks()">View My Tasks</button>
+            </div>
+
+            <div class="stats">
+                <div class="stat-card">
+                    <h2 id="taskCount">0</h2>
+                    <p>Total Tasks</p>
+                </div>
+
+                <div class="stat-card">
+                    <h2 id="completedCount">0</h2>
+                    <p>Completed</p>
+                </div>
+
+                <div class="stat-card">
+                    <h2 id="progress">0%</h2>
+                    <p>Progress</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="tasks">
+            <h2>My Tasks</h2>
+
+            <div class="task-input">
+                <input
+                    type="text"
+                    id="taskInput"
+                    placeholder="Enter a new task..."
+                >
+
+                <button onclick="addTask()">Add Task</button>
+            </div>
+
+            <ul id="taskList"></ul>
+        </section>
+
+        <section class="section" id="notes">
+            <h2>Quick Notes</h2>
+
+            <textarea
+                id="notesBox"
+                placeholder="Write your study notes here..."
+            ></textarea>
+
+            <button onclick="saveNotes()">Save Notes</button>
+            <p id="saveMessage"></p>
+        </section>
+
+        <section class="section about" id="about">
+            <h2>About StudyFlow</h2>
+
+            <p>
+                StudyFlow is a student-focused productivity application
+                designed to help students organize their academic work,
+                track assignments and keep important notes in one place.
+            </p>
+
+            <div class="features">
+                <div>
+                    <h3>📚 Study Planning</h3>
+                    <p>Organize your academic tasks.</p>
+                </div>
+
+                <div>
+                    <h3>✅ Task Tracking</h3>
+                    <p>Monitor completed assignments.</p>
+                </div>
+
+                <div>
+                    <h3>📝 Notes</h3>
+                    <p>Save important study information.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 StudyFlow | Student Productivity Project</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
